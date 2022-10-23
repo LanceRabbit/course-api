@@ -1,0 +1,23 @@
+# See https://docs.rubocop.org/rubocop/configuration
+#
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.7.6
+  DisplayCopNames: true
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'db/schema.rb'
+
+Rails:
+  Enabled: true
