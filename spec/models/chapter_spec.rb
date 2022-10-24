@@ -22,6 +22,7 @@ require 'rails_helper'
 RSpec.describe Chapter, type: :model do
   describe 'associations' do
     it { is_expected.to belong_to(:course) }
+    it { is_expected.to have_many(:lessons).dependent(:destroy) }
   end
 
   describe 'validates' do

@@ -18,6 +18,7 @@
 #  fk_rails_...  (course_id => courses.id)
 #
 class Chapter < ApplicationRecord
+  has_many :lessons, dependent: :destroy
   belongs_to :course, optional: false
 
   validates :title, presence: true
