@@ -10,5 +10,7 @@
 #  updated_at  :datetime         not null
 #
 class Course < ApplicationRecord
+  has_many :chapters, dependent: :destroy
+
   validates :title, :instructor, presence: true
 end
