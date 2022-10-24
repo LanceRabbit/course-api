@@ -24,7 +24,7 @@ FactoryBot.define do
     title { "Lesson tilte" }
     content { "This is the content of lesson" }
     description { "This is the description of lesson" }
-    add_attribute(:sequence) { 1 }
+    sequence(:sequence) { |n| n + 1 }
     association :chapter, factory: :chapter
   end
 end
