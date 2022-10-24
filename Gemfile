@@ -28,6 +28,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # environment
 gem "dotenv-rails", "~> 2.8.0"
+gem 'graphql', '~> 2.0.15'
+gem 'graphiql-rails', '~> 1.8.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
