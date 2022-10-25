@@ -20,7 +20,7 @@
 FactoryBot.define do
   factory :chapter do
     title { "Chapter title" }
-    add_attribute(:sequence) { 1 }
+    sequence(:sequence) { |n| n + 1 }
     association :course, factory: :course
   end
 end
