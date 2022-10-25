@@ -25,5 +25,14 @@ Rails:
 Style/Documentation:
   Enabled: false
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
 Rails/I18nLocaleTexts:
   Enabled: false
+
+RSpec/MultipleExpectations:
+    Max: 4
