@@ -15,5 +15,13 @@ module Types
     def courses
       Course.all
     end
+
+    # TODO: needs to fix the N+1 issue
+    field :course, Types::CourseType, null: false do
+      argument :id, ID, required: true
+    end
+    def course(id:)
+      Course.find(id)
+    end
   end
 end
